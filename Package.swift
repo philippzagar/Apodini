@@ -293,6 +293,7 @@ let package = Package(
             dependencies: [
                 .target(name: "Apodini"),
                 .target(name: "ApodiniUtils"),
+                .product(name: "OpenAPIKit", package: "OpenAPIKit"),
                 .product(name: "OrderedCollections", package: "swift-collections")
             ]
         ),
