@@ -126,8 +126,10 @@ public final class HTTPRequest: RequestBasis, Equatable, Hashable, CustomStringC
             ),
             LoggingMetadataInformation(
                 key: .init("url"),
-                rawValue: .string(self.url.stringValue)
-            ),
+                rawValue: .string(self.url.pathIncludingQueryAndFragment)
+            )
+            /*
+            ,
             LoggingMetadataInformation(
                 key: .init("url.path"),
                 rawValue: .string(self.url.path)
@@ -136,6 +138,7 @@ public final class HTTPRequest: RequestBasis, Equatable, Hashable, CustomStringC
                 key: .init("url.pathAndQuery"),
                 rawValue: .string(self.url.pathIncludingQueryAndFragment)
             )
+             */
         ]
         switch bodyStorage {
         case .buffer(let buffer):
